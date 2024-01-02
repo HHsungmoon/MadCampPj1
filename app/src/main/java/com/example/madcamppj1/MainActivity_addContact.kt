@@ -23,6 +23,7 @@ class BottomSheetFrag : BottomSheetDialogFragment() {
     private lateinit var phoneEditText: EditText
     private lateinit var addPhotoButton: Button
     private lateinit var doneButton: Button
+    private lateinit var cancelButton: Button
 
     private var selectedImageUri: Uri? = null // 사용자가 선택한 이미지의 URI
 
@@ -48,35 +49,37 @@ class BottomSheetFrag : BottomSheetDialogFragment() {
         phoneEditText = view.findViewById(R.id.editTextPhone)
         addPhotoButton = view.findViewById(R.id.btnAddPhoto)
         doneButton = view.findViewById(R.id.btnDone)
-
+        cancelButton = view.findViewById(R.id.btnCancel)
+        doneButton.setClickable(false);
+        doneButton.setTextColor(resources.getColor(R.color.btnDeactivatedColor))
         // Handling addPhotoButton click event
         addPhotoButton.setOnClickListener {
             openGallery()
         }
-        doneButton.setClickable(false);
-        doneButton.setTextColor(resources.getColor(R.color.btnDoneDeactivatedColor))
+
         // Handling doneButton click event
         doneButton.setOnClickListener {
             val firstName = firstNameEditText.text.toString()
-
-
             // Here you can use 'selectedImageUri' for the selected image URI
             // Perform any required operation with the data obtained from the EditText fields and the image URI
             if (firstName.isNotEmpty()) {
-                doneButton.setClickable(true)
-                doneButton.setTextColor(resources.getColor(R.color.btnDoneActivatedColor))
+                doneButton.isEnabled = true
+//                doneButton.setTextColor(resources.getColor(R.color.btnActivatedColor))
                 val lastName = lastNameEditText.text.toString()
                 val phoneNumber = phoneEditText.text.toString()
-                val contact = Profile(selectedImageUri,firstName+lastName, phoneNumber)
+                val contact = Profile(selectedImageUri,"$firstName $lastName", phoneNumber)
                 profilesList?.add(contact)
-
+                dismiss()
                 // TODO: contactList를 사용하여 ListView에 데이터 표시
                 // 예를 들어, Custom Adapter를 사용하여 ListView에 데이터 연결
             } else {
                 // 사용자에게 이름을 입력하도록 요청하는 메시지 표시
+                doneButton.isEnabled = false
+//                doneButton.setTextColor(resources.getColor(R.color.btnDeactivatedColor))
                 Toast.makeText(context, "Please enter a first name.", Toast.LENGTH_SHORT).show()
             }
-
+        }
+        cancelButton.setOnClickListener {
             dismiss()
         }
     }

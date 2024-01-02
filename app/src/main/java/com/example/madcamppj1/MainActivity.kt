@@ -34,6 +34,14 @@ class MainActivity : AppCompatActivity() {
         button.setOnClickListener{
             showBottomSheet(profilesList)
         }
+
+//        // Set item click listener for the ListView
+//        listView.setOnItemClickListener { _, _, position, _ ->
+//            val profile = profilesList[position]
+//            val intent = Intent(this, ProfileDetailsActivity::class.java)
+//            intent.putExtra("PROFILE", profile)
+//            startActivity(intent)
+//        }
     }
 
     private fun loadProfilesFromJson(): MutableList<Profile> {
