@@ -83,7 +83,7 @@
 
     <EditText
         android:id="@+id/editTextMessage"
-        android:layout_width="178dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
 
         android:layout_alignParentStart="true"
@@ -102,11 +102,11 @@
 
     <ImageButton
         android:id="@+id/btnSendMsg"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         android:layout_alignTop="@+id/editTextMessage"
-        android:layout_marginStart="13dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="8dp"
         android:layout_toEndOf="@+id/editTextMessage"
         android:background="@drawable/circle_shape"
         android:gravity="center_vertical"
@@ -114,35 +114,57 @@
         android:textColor="@color/black"
         app:tint="@color/white" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_stk1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="490dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="463dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/stk1"
         android:text="시바컷" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_stk2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignBottom="@+id/btn_stk1"
-        android:layout_marginStart="12dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="11dp"
         android:layout_toEndOf="@+id/btn_stk1"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/stk2"
         android:text="콕이컷" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_stk3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
         android:layout_alignBottom="@+id/btn_stk2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="227dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="-4dp"
+        android:layout_toEndOf="@+id/btn_stk2"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/stk3"
         android:text="뮤트컷" />
+
+    <ImageButton
+        android:id="@+id/btn_stk4"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@+id/btn_stk3"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="1dp"
+        android:layout_toEndOf="@+id/btn_stk3"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:scaleType="fitCenter"
+        android:src="@drawable/stk4"
+        android:text="하트" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
