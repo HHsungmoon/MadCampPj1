@@ -6,7 +6,7 @@
 
 뤼튼 Gpt의 이미지 생성 기능을 사용.
 
-<img width=200 height=200 src="./CaptureImg/1-0.jpg">
+<img width=200 height=200 src="./CaptureImg/0-1.png">
 
 
 기본 Activity 화면 3개를 만들고, 버튼 기능을 이용해 화면전환을 수행한다.
@@ -19,6 +19,7 @@
 
 1. 앱 내부에 저장된 json파일의 프로필 사진, 이름, 전화번호를 보여줍니다.
 
+<img width=200 height=200 src="./CaptureImg/1-1-1.jpg">
 
 2. 새로운 연락처를 등록합니다.
     - 이름, 연락처는 필수 입력 사항입니다. 이름, 연락처를 입력하지 않을 시 입력을 요청합니다.
