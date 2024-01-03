@@ -67,19 +67,19 @@
         android:layout_marginEnd="1dp"
         android:src="@drawable/image" />
 
-    <ImageButton
-        android:id="@+id/btnAddTag"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="264dp"
-        android:layout_marginLeft="260dp"
-        android:layout_marginTop="353dp"
-        android:background="@drawable/circle_shape"
-        android:scaleType="fitCenter"
-        android:src="@drawable/igtag"
-        app:tint="@color/white" />
+<!--    <ImageButton-->
+<!--        android:id="@+id/btnAddTag"-->
+<!--        android:layout_width="30dp"-->
+<!--        android:layout_height="30dp"-->
+<!--        android:layout_alignParentStart="true"-->
+<!--        android:layout_alignParentTop="true"-->
+<!--        android:layout_marginStart="264dp"-->
+<!--        android:layout_marginLeft="260dp"-->
+<!--        android:layout_marginTop="353dp"-->
+<!--        android:background="@drawable/circle_shape"-->
+<!--        android:scaleType="fitCenter"-->
+<!--        android:src="@drawable/igtag"-->
+<!--        app:tint="@color/white" />-->
 
     <EditText
         android:id="@+id/editTextMessage"
@@ -116,12 +116,12 @@
 
     <ImageButton
         android:id="@+id/btn_stk1"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="463dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="470dp"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:scaleType="fitCenter"
         android:src="@drawable/stk1"
@@ -132,8 +132,8 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignBottom="@+id/btn_stk1"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="1dp"
         android:layout_toEndOf="@+id/btn_stk1"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:scaleType="fitCenter"
@@ -142,11 +142,11 @@
 
     <ImageButton
         android:id="@+id/btn_stk3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
         android:layout_alignBottom="@+id/btn_stk2"
-        android:layout_marginStart="30dp"
-        android:layout_marginBottom="-4dp"
+        android:layout_marginStart="31dp"
+        android:layout_marginBottom="4dp"
         android:layout_toEndOf="@+id/btn_stk2"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:scaleType="fitCenter"
@@ -158,8 +158,8 @@
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:layout_alignBottom="@+id/btn_stk3"
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="1dp"
+        android:layout_marginStart="27dp"
+        android:layout_marginBottom="-5dp"
         android:layout_toEndOf="@+id/btn_stk3"
         android:background="?attr/selectableItemBackgroundBorderless"
         android:scaleType="fitCenter"
@@ -182,6 +182,23 @@
         app:itemRippleColor="@android:color/transparent"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_menu" />
+
+<!--    <LinearLayout-->
+<!--        android:id="@+id/bottomSheet"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:background="@android:color/white"-->
+<!--        app:behavior_hideable="true"-->
+<!--        app:behavior_peekHeight="0dp"-->
+<!--        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">-->
+
+<!--        <ListView-->
+<!--            android:id="@+id/profileListView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--    </LinearLayout>-->
 
 
 

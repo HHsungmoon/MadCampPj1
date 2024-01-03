@@ -11,6 +11,7 @@ import android.net.Uri
 import com.example.madcamppj1.Profile
 import com.example.madcamppj1.R
 
+
 class ProfileAdapter(context: Context, resource: Int, profiles: List<Profile>) :
     ArrayAdapter<Profile>(context, resource, profiles) {
 
@@ -67,4 +68,5 @@ class ProfileAdapter(context: Context, resource: Int, profiles: List<Profile>) :
 //            context.packageName
 //        )
 //    }
+
 }
