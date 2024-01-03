@@ -2,26 +2,51 @@
   {
     "profileImageResId": "haerin",
     "name": "강해린",
-    "phoneNumber": "123-456-7890"
+    "phoneNumber": "010-6345-7890"
   },
   {
     "profileImageResId": "minji",
     "name": "김민지",
-    "phoneNumber": "987-654-3210"
+    "phoneNumber": "010-8655-3210"
   },
   {
     "profileImageResId": "daniel",
     "name": "다니엘",
-    "phoneNumber": "987-654-3210"
+    "phoneNumber": "010-6564-3210"
   },
   {
     "profileImageResId": "hanni",
     "name": "팜하니",
-    "phoneNumber": "987-654-3210"
+    "phoneNumber": "010-7875-3210"
   },
   {
     "profileImageResId": "hyein",
     "name": "이혜인",
-    "phoneNumber": "987-654-3210"
+    "phoneNumber": "010-2432-3210"
+  },
+  {
+    "profileImageResId": "chaewon",
+    "name": "김채원",
+    "phoneNumber": "010-2532-8656"
+  },
+  {
+    "profileImageResId": "younjin",
+    "name": "허윤진",
+    "phoneNumber": "010-2321-4534"
+  },
+  {
+    "profileImageResId": "zuha",
+    "name": "카즈하",
+    "phoneNumber": "010-1211-76754"
+  },
+  {
+    "profileImageResId": "kura",
+    "name": "사쿠라",
+    "phoneNumber": "010-3424-2467"
+  },
+  {
+    "profileImageResId": "eunchae",
+    "name": "홍은채",
+    "phoneNumber": "010-2235-8786"
   }
 ]

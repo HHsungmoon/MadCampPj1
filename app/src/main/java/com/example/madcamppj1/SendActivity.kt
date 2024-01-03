@@ -85,9 +85,10 @@ class SendActivity : AppCompatActivity() {
         }
 
 
-        val btn_stk1 = findViewById<Button>(R.id.btn_stk1)
-        val btn_stk2 = findViewById<Button>(R.id.btn_stk2)
-        val btn_stk3 = findViewById<Button>(R.id.btn_stk3)
+        val btn_stk1 = findViewById<ImageButton>(R.id.btn_stk1)
+        val btn_stk2 = findViewById<ImageButton>(R.id.btn_stk2)
+        val btn_stk3 = findViewById<ImageButton>(R.id.btn_stk3)
+        val btn_stk4 = findViewById<ImageButton>(R.id.btn_stk4)
 
         btn_stk1.setOnClickListener {
             stk_num = R.drawable.stk1
@@ -105,6 +106,13 @@ class SendActivity : AppCompatActivity() {
 
         btn_stk3.setOnClickListener {
             stk_num = R.drawable.stk3
+            stk_X = 140f
+            stk_Y = 200f
+            dispatchTakePictureIntent()
+        }
+
+        btn_stk4.setOnClickListener {
+            stk_num = R.drawable.stk4
             stk_X = 140f
             stk_Y = 200f
             dispatchTakePictureIntent()
