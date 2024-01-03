@@ -13,13 +13,13 @@
 
 |Contacts|Photos|Google Map|
 |--|--|--|
-|<img width=200 height=200 src="./CaptureImg/1-1-1.jpg">|<img width=200 height=200 src="./CaptureImg/1-1-1.jpg">|<img width=200 height=200 src="./CaptureImg/1-1-1.jpg">|
+|<img width=200 height=400 src="./CaptureImg/1-1-1.jpg">|<img width=200 height=400 src="./CaptureImg/1-1-1.jpg">|<img width=200 height=400 src="./CaptureImg/1-1-1.jpg">|
 
 ## Tab1 : Contacts
 
 1. 앱 내부에 저장된 json파일의 프로필 사진, 이름, 전화번호를 보여줍니다.
 
-<img width=200 height=200 src="./CaptureImg/1-1-1.jpg">
+<img width=200 height=400 src="./CaptureImg/1-1-1.jpg">
 
 2. 새로운 연락처를 등록합니다.
     - 이름, 연락처는 필수 입력 사항입니다. 이름, 연락처를 입력하지 않을 시 입력을 요청합니다.
@@ -27,11 +27,11 @@
 
 |Contacts|Photos|Google Map|
 |--|--|--|
-|<img width=200 height=200 src="./CaptureImg/1-2-0.jpg">|<img width=200 height=200 src="./CaptureImg/1-2-1.jpg">|<img width=200 height=200 src="./CaptureImg/1-2-2.jpg">|
+|<img width=200 height=400 src="./CaptureImg/1-2-0.jpg">|<img width=200 height=400 src="./CaptureImg/1-2-1.jpg">|<img width=200 height=400 src="./CaptureImg/1-2-2.jpg">|
 
 |Contacts|Photos|Google Map|
 |--|--|--|
-|<img width=200 height=200 src="./CaptureImg/1-2-4.jpg">|<img width=200 height=200 src="./CaptureImg/1-2-5.jpg">|<img width=200 height=200 src="./CaptureImg/1-2-6.jpg">|
+|<img width=200 height=400 src="./CaptureImg/1-2-4.jpg">|<img width=200 height=400 src="./CaptureImg/1-2-5.jpg">|<img width=200 height=400 src="./CaptureImg/1-2-6.jpg">|
 
 
 ## Tab2 : Gallery
@@ -45,7 +45,7 @@
 
 |Contacts|Photos|Google Map|
 |--|--|--|
-|<img width=200 height=200 src="./CaptureImg/1-3-1.jpg">|<img width=200 height=200 src="./CaptureImg/1-3-2.jpg">|<img width=200 height=200 src="./CaptureImg/1-3-3.jpg">|
+|<img width=200 height=400 src="./CaptureImg/1-3-1.jpg">|<img width=200 height=400 src="./CaptureImg/1-3-2.jpg">|<img width=200 height=400 src="./CaptureImg/1-3-3.jpg">|
 
 ## Tab3 : Send
 
@@ -54,7 +54,7 @@
     -촬영후 스티커와 폴라로이드 테두리가 추가된 이미지 파일을 출력함
 
    
-<img width=200 height=200 src="./CaptureImg/1-4-1.jpg">
+<img width=200 height=400 src="./CaptureImg/1-4-1.jpg">
 
 
 ## [미구현] 기능
