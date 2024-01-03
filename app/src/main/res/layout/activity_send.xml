@@ -14,7 +14,7 @@
         android:elevation="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
         <!-- Left side: Contacts text -->
@@ -45,59 +45,53 @@
     </androidx.appcompat.widget.Toolbar>
 
     <!-- Your ImageView with the image -->
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="409dp"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="55dp"
-        android:src="@drawable/img_1"
-        android:adjustViewBounds="true"/>
 
-    <ImageButton
-        android:id="@+id/btnAddImg"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@id/toolbar"
-        android:layout_marginTop="80dp"
-        android:background="@color/white"
-        android:scaleType="fitCenter"
-        android:src="@drawable/img" />
+<!--    <ImageView-->
+<!--        android:id="@+id/imageView"-->
+<!--        android:layout_width="409dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_marginBottom="55dp"-->
+<!--        android:adjustViewBounds="true"-->
+<!--        android:src="@drawable/img_1" />-->
+
 
     <ImageView
         android:id="@+id/imageInput"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/image"
-        android:layout_alignStart="@id/btnAddImg"
-        android:layout_alignTop="@id/btnAddImg"
-        android:layout_alignEnd="@id/btnAddImg"
-        android:layout_alignBottom="@id/btnAddImg"/>
+        android:layout_width="410dp"
+        android:layout_height="377dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="103dp"
+        android:layout_marginEnd="1dp"
+        android:src="@drawable/image" />
 
     <ImageButton
         android:id="@+id/btnAddTag"
-        android:src="@drawable/igtag"
-        app:tint="@color/white"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:layout_above="@id/editTextMessage"
-        android:layout_marginTop="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="264dp"
         android:layout_marginLeft="260dp"
-        android:layout_marginBottom="-15dp"
+        android:layout_marginTop="353dp"
+        android:background="@drawable/circle_shape"
         android:scaleType="fitCenter"
-        android:background="@drawable/circle_shape"/>
+        android:src="@drawable/igtag"
+        app:tint="@color/white" />
 
     <EditText
         android:id="@+id/editTextMessage"
-        android:layout_width="match_parent"
+        android:layout_width="178dp"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btnAddImg"
+
         android:layout_alignParentStart="true"
-        android:layout_marginTop="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="58dp"
+
         android:layout_marginLeft="70dp"
-        android:layout_marginRight="70dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="400dp"
         android:background="@drawable/white_round_border"
         android:hint="Add message"
         android:paddingLeft="15dp"
@@ -107,17 +101,48 @@
         android:textColor="@android:color/black" />
 
     <ImageButton
-        android:id="@+id/btnAddPhoto"
-        android:src="@drawable/send"
-        android:background="@drawable/circle_shape"
-        app:tint="@color/white"
+        android:id="@+id/btnSendMsg"
         android:layout_width="40dp"
         android:layout_height="40dp"
-        android:textColor="@color/black"
+        android:layout_alignTop="@+id/editTextMessage"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="1dp"
+        android:layout_toEndOf="@+id/editTextMessage"
+        android:background="@drawable/circle_shape"
         android:gravity="center_vertical"
-        android:layout_below="@id/editTextMessage"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="31dp"/>
+        android:src="@drawable/send"
+        android:textColor="@color/black"
+        app:tint="@color/white" />
+
+    <Button
+        android:id="@+id/btn_stk1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="490dp"
+        android:text="시바컷" />
+
+    <Button
+        android:id="@+id/btn_stk2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_stk1"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="0dp"
+        android:layout_toEndOf="@+id/btn_stk1"
+        android:text="콕이컷" />
+
+    <Button
+        android:id="@+id/btn_stk3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/btn_stk2"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="227dp"
+        android:layout_marginBottom="0dp"
+        android:text="뮤트컷" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
@@ -135,5 +160,7 @@
         app:itemRippleColor="@android:color/transparent"
         app:labelVisibilityMode="unlabeled"
         app:menu="@menu/bottom_menu" />
+
+
 
 </RelativeLayout>
