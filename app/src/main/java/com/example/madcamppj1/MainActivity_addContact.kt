@@ -2,6 +2,7 @@ package com.example.madcamppj1
 
 import android.app.Activity
 import android.content.Intent
+import android.graphics.Color
 import android.net.Uri
 import android.os.Bundle
 import android.provider.MediaStore
@@ -11,15 +12,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.fragment.app.FragmentManager
+import com.bumptech.glide.Glide
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 class BottomSheetFrag : BottomSheetDialogFragment() {
+    private var onProfileAddedListener: OnProfileAddedListener? = null
     private var profilesList: MutableList<Profile>? = null
-
-    private lateinit var firstNameEditText: EditText
-    private lateinit var lastNameEditText: EditText
+    private var imgView: ImageView? = null
+    private lateinit var nameEditText: EditText
     private lateinit var phoneEditText: EditText
     private lateinit var addPhotoButton: Button
     private lateinit var doneButton: Button
@@ -27,6 +30,9 @@ class BottomSheetFrag : BottomSheetDialogFragment() {
 
     private var selectedImageUri: Uri? = null // 사용자가 선택한 이미지의 URI
 
+    fun setOnProfileAddedListener(listener: OnProfileAddedListener) {
+        onProfileAddedListener = listener
+    }
     // Function to set profilesList from MainActivity
     fun setProfilesList(profiles: MutableList<Profile>?) {
         profilesList = profiles
@@ -39,19 +45,19 @@ class BottomSheetFrag : BottomSheetDialogFragment() {
     ): View? {
         super.onCreateView(inflater, container, savedInstanceState)
         val view = inflater.inflate(R.layout.add_contact, container, false)
+        imgView = view.findViewById(R.id.imageView)
         return view
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
-        firstNameEditText = view.findViewById(R.id.editTextFirstName)
-        lastNameEditText = view.findViewById(R.id.editTextLastName)
+        imgView = view.findViewById<ImageView>(R.id.imageView)
+        nameEditText = view.findViewById(R.id.editTextName)
         phoneEditText = view.findViewById(R.id.editTextPhone)
         addPhotoButton = view.findViewById(R.id.btnAddPhoto)
         doneButton = view.findViewById(R.id.btnDone)
         cancelButton = view.findViewById(R.id.btnCancel)
-        doneButton.setClickable(false);
-        doneButton.setTextColor(resources.getColor(R.color.btnDeactivatedColor))
+//        doneButton.setClickable(false);
+//        doneButton.setTextColor(Color.parseColor("#E9E9E9"))
         // Handling addPhotoButton click event
         addPhotoButton.setOnClickListener {
             openGallery()
@@ -59,30 +65,30 @@ class BottomSheetFrag : BottomSheetDialogFragment() {
 
         // Handling doneButton click event
         doneButton.setOnClickListener {
-            val firstName = firstNameEditText.text.toString()
+            val name = nameEditText.text.toString()
+            val phoneNumber = phoneEditText.text.toString()
             // Here you can use 'selectedImageUri' for the selected image URI
             // Perform any required operation with the data obtained from the EditText fields and the image URI
-            if (firstName.isNotEmpty()) {
-                doneButton.isEnabled = true
-//                doneButton.setTextColor(resources.getColor(R.color.btnActivatedColor))
-                val lastName = lastNameEditText.text.toString()
-                val phoneNumber = phoneEditText.text.toString()
-                val contact = Profile(selectedImageUri,"$firstName $lastName", phoneNumber)
-                profilesList?.add(contact)
+            if (name.isNotEmpty()&&phoneNumber.isNotEmpty()) {
+                val contact = Profile(selectedImageUri,"$name", phoneNumber)
+                onProfileAddedListener?.onProfileAdded(contact)
                 dismiss()
                 // TODO: contactList를 사용하여 ListView에 데이터 표시
                 // 예를 들어, Custom Adapter를 사용하여 ListView에 데이터 연결
             } else {
+                if(name.isEmpty()&&phoneNumber.isEmpty()) {
+                    Toast.makeText(context, "Please enter a name and phone number.", Toast.LENGTH_SHORT).show()
+                }
                 // 사용자에게 이름을 입력하도록 요청하는 메시지 표시
-                doneButton.isEnabled = false
-//                doneButton.setTextColor(resources.getColor(R.color.btnDeactivatedColor))
-                Toast.makeText(context, "Please enter a first name.", Toast.LENGTH_SHORT).show()
+                else if (name.isEmpty()) (Toast.makeText(context, "Please enter a name.", Toast.LENGTH_SHORT).show())
+                else (Toast.makeText(context, "Please enter a phone number.", Toast.LENGTH_SHORT).show())
             }
         }
         cancelButton.setOnClickListener {
             dismiss()
         }
     }
+
 
     private fun openGallery() {
         val galleryIntent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
@@ -98,12 +104,29 @@ class BottomSheetFrag : BottomSheetDialogFragment() {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == GALLERY_REQUEST_CODE && resultCode == Activity.RESULT_OK && data != null) {
             selectedImageUri = data.data
-            // Do something with the selectedImageUri
+//            if(selectedImageUri!=null) {
+////                    imageView.setImageURI(null)
+////                    print(selectedImageUri)
+////                    imageView.setImageURI(selectedImageUri)
+//                Glide.with(this)
+//                    .load(selectedImageUri)
+//                    .into(imgView)
+////                    imageView.setImageResource(R.drawable.daniel)
+////                    imageView.invalidate()
+//                // Do something with the selectedImageUri
+//            }
+            imgView?.let { imageView ->
+                selectedImageUri?.let { uri ->
+                    Glide.with(this@BottomSheetFrag) // Use the correct reference to the fragment
+                        .load(uri)
+                        .into(imageView)
+                }
+            }
         }
     }
 
-    // Other code...
 }
+
 //
 //        // XML의 뷰 요소 초기화
 //        firstNameEditText = view.findViewById(R.id.editTextFirstName)

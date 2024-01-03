@@ -16,7 +16,4 @@
     <color name="black5">#E7E7E7</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="btnActivatedColor">#007AFF</color> <!-- Green color for activated state -->
-    <color name="btnDeactivatedColor">#E9E9E9</color> <!-- Red color for deactivated state -->
-
 </resources>

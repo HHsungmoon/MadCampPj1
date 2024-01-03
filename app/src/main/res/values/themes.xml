@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.MadCampPj1" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="windowNoTitle">true</item>
-        <item name="android:windowFullscreen">true</item>
+<!--        <item name="android:windowFullscreen">true</item>-->
         <!--        &lt;!&ndash; Primary brand color. &ndash;&gt;-->
         <!--        <item name="colorPrimary">@color/black2</item>-->
         <!--        <item name="colorPrimaryVariant">@color/black2</item>-->

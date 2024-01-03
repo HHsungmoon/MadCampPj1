@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.webkit.MimeTypeMap
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.databinding.DataBindingUtil
@@ -27,9 +28,9 @@ class Activity_Gallery2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_gallery2)
 
-        var getImage_btn = findViewById<Button>(R.id.getImage)
+        var getImage_btn = findViewById<ImageButton>(R.id.getImage)
 
-        var recyclerView = findViewById<RecyclerView>(R.id.reciclerView)
+        var recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
 
         val layoutManager = LinearLayoutManager(this)
         recyclerView.layoutManager = layoutManager
