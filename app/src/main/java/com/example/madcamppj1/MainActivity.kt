@@ -15,7 +15,8 @@ import org.json.JSONArray
 import org.json.JSONException
 import java.io.IOException
 import android.net.Uri
-//import kotlin.coroutines.jvm.internal.CompletedContinuation.context
+
+import com.example.madcamppj1.*
 
 class MainActivity : AppCompatActivity(), OnProfileAddedListener {
     private lateinit var profilesList: MutableList<Profile>
@@ -23,6 +24,8 @@ class MainActivity : AppCompatActivity(), OnProfileAddedListener {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         val listView: ListView = findViewById(R. id.listView)
         profilesList = loadProfilesFromJson()
