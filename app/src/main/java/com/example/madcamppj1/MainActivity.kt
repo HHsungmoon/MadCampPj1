@@ -115,6 +115,8 @@ class MainActivity : AppCompatActivity(), OnProfileAddedListener {
                 }
 
                 R.id.bottom_send -> {
+//                    val profilesList = ArrayList(profilesList)
+//                    intent.putExtra("profilesList", profilesList)
                     startActivity(Intent(applicationContext, SendActivity::class.java))
                     overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
                     finish()
