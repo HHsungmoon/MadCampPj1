@@ -141,7 +141,7 @@ class SendActivity : AppCompatActivity() {
         val sendButton = findViewById<ImageButton>(R.id.btnSendMsg)
         sendButton.setOnClickListener {
             val intent = Intent(Intent.ACTION_SENDTO)
-            intent.data = Uri.parse("smsto:$01038764685") // 문자 보낼 번호
+            intent.data = Uri.parse("smsto:01038764685") // 문자 보낼 번호
             intent.putExtra("sms_body", "Hi") // 문자의 내용
             //intent.putExtra("sms_body", img_path)
             //intent.type = "image/png"
@@ -161,6 +161,7 @@ class SendActivity : AppCompatActivity() {
     private fun resizeBitmap(originalBitmap: Bitmap, newWidth: Int, newHeight: Int): Bitmap {
         return Bitmap.createScaledBitmap(originalBitmap, newWidth, newHeight, true)
     }
+
 
     private fun addStickerToBitmap(
         originalBitmap: Bitmap,
