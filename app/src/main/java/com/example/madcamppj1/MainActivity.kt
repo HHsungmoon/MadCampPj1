@@ -17,24 +17,33 @@ import java.io.IOException
 import android.net.Uri
 //import kotlin.coroutines.jvm.internal.CompletedContinuation.context
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), OnProfileAddedListener {
+    private lateinit var profilesList: MutableList<Profile>
+    private lateinit var adapter: ProfileAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        moveTab()
-
-        val listView: ListView = findViewById(R.id.listView)
-        val profilesList = loadProfilesFromJson()
+        val listView: ListView = findViewById(R. id.listView)
+        profilesList = loadProfilesFromJson()
         // Custom adapter for the ListView
-        val adapter = ProfileAdapter(this, R.layout.list_item_layout, profilesList)
+        adapter = ProfileAdapter(this, R.layout.list_item_layout, profilesList)
         listView.adapter = adapter
 
         val button = findViewById<ImageButton>(R.id.btnAddContact)
         button.setOnClickListener{
             showBottomSheet(profilesList)
         }
+        moveTab()
+
     }
+//        // Set item click listener for the ListView
+//        listView.setOnItemClickListener { _, _, position, _ ->
+//            val profile = profilesList[position]
+//            val intent = Intent(this, ProfileDetailsActivity::class.java)
+//            intent.putExtra("PROFILE", profile)
+//            startActivity(intent)
+//        }
 
     private fun loadProfilesFromJson(): MutableList<Profile> {
         val profiles = mutableListOf<Profile>()
@@ -65,8 +74,14 @@ class MainActivity : AppCompatActivity() {
     private fun showBottomSheet(pList: MutableList<Profile>) {
         val frag = BottomSheetFrag()
         frag.setProfilesList(pList)
+        frag.setOnProfileAddedListener(this) // 인터페이스 설정
         frag.setStyle(DialogFragment.STYLE_NORMAL, R.style.RoundCornerBottomSheetDialogTheme)
         frag.show(supportFragmentManager, frag.tag)
+    }
+    override fun onProfileAdded(profile: Profile) {
+        // BottomSheetFrag에서 프로필 추가 시 호출되는 메서드
+        profilesList.add(profile) // MainActivity의 profilesList에 추가
+        adapter.notifyDataSetChanged() // ListView 업데이트
     }
     private fun getImageUriFromDrawable(context:Context, imageName: String): Uri? {
         // 이미지 이름을 기반으로 Uri를 생성하는 로직 작성

@@ -6,42 +6,146 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+
         tools:context=".Activity_Gallery2">
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="Context"
-            android:textSize="25sp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="24dp"
+            android:text="New Gallery"
+            android:textColor="@color/black2"
+            android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.083"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/reciclerView"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="16dp"
+            android:id="@+id/recyclerView"
+            android:layout_width="346dp"
+            android:layout_height="566dp"
+            android:layout_marginTop="32dp"
             android:orientation="vertical"
-            app:layout_constraintBottom_toTopOf="@+id/getImage"
+
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.492"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-        <Button
+        <ImageButton
             android:id="@+id/getImage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="36dp"
-            android:text="GET IMAGE"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintHorizontal_bias="0.857"
+            app:layout_constraintStart_toEndOf="@+id/textView4"
+            app:layout_constraintTop_toTopOf="@+id/textView4"
+            app:layout_constraintVertical_bias="0.014" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
+
+<!--<RelativeLayout-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    tools:context=".Activity_Gallery2">-->
+<!--        <androidx.appcompat.widget.Toolbar-->
+<!--            android:id="@+id/toolbar2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/white"-->
+<!--            android:elevation="0dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">-->
+
+<!--            &lt;!&ndash; Left side: Contacts text &ndash;&gt;-->
+<!--            <TextView-->
+<!--                android:id="@+id/textView4"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginStart="16dp"-->
+<!--                android:text="New Gallery"-->
+<!--                android:textColor="@color/black2"-->
+<!--                android:textSize="30sp"-->
+<!--                android:textStyle="bold"/>-->
+
+<!--            <ImageButton-->
+<!--                android:id="@+id/getImage"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_gravity="center_vertical|end"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:background="?attr/selectableItemBackgroundBorderless"-->
+<!--                android:paddingStart="16dp"-->
+<!--                android:paddingEnd="5dp"-->
+<!--                android:paddingTop="16dp"-->
+<!--                android:paddingBottom="5dp"-->
+<!--                android:src="@drawable/ic_add"-->
+<!--                app:tint="@color/black" />-->
+<!--        </androidx.appcompat.widget.Toolbar>-->
+<!--&lt;!&ndash;        <TextView&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/textView4"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginTop="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginStart="20dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="New Gallery"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textSize="25sp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:textStyle="bold"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintHorizontal_bias="0.083"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintTop_toTopOf="parent" />&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <ImageButton&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/getImage"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_gravity="center_vertical|end"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:scaleType="fitCenter"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:background="?attr/selectableItemBackgroundBorderless"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingStart="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingEnd="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingTop="16dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:paddingBottom="5dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:src="@drawable/ic_add"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:tint="@color/black" />&ndash;&gt;-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recyclerView"-->
+<!--            android:layout_below="@id/toolbar2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="600dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:layout_marginBottom="16dp"/>-->
+<!--&lt;!&ndash;            android:orientation="vertical"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintHorizontal_bias="0.0"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintStart_toStartOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintTop_toBottomOf="@+id/textView4"/>&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintBottom_toTopOf="@+id/getImage"&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;        <Button&ndash;&gt;-->
+<!--&lt;!&ndash;            android:id="@+id/getImage"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_width="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_height="wrap_content"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:layout_marginBottom="30dp"&ndash;&gt;-->
+<!--&lt;!&ndash;            android:text="GET IMAGE"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintBottom_toBottomOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintEnd_toEndOf="parent"&ndash;&gt;-->
+<!--&lt;!&ndash;            app:layout_constraintStart_toStartOf="parent" />&ndash;&gt;-->
+<!--</RelativeLayout>-->
